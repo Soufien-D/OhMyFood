@@ -1,0 +1,390 @@
+@use "./pages.scss";
+
+/**** VARIABLES ****/
+
+$gris_clair: #F6F6F6;
+$violet: #9356DC;
+$gris_icones: #7E7E7E;
+$background_footer: #353535;
+
+/**** VARIABLES ****/
+
+/**** GENERAL ****/
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+/**** GENERAL ****/
+
+/**** MAIN DEBUT ****/
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15); 
+    &__logo {
+        padding: 14px 0px 13px 0px;
+        @media screen and (min-width: 1024px) {
+            padding: 30px;
+        }
+    }
+}
+
+/* HEADER */
+
+/* LOCALISATION */
+
+.localisation {
+    background-color: #EAEAEA;
+    display: flex;
+    justify-content: center;
+    &__input {
+        border: none;
+        outline: none;
+        background-color: #EAEAEA;
+        padding: 17px 0px 17px 17px;
+        width: 145px;
+        font-size: 16px; 
+        font-weight: 500; 
+    }
+    &__icone {
+        color: #353535;
+        width: 12px;
+        height: 16px; 
+    }
+}
+
+/* LOCALISATION */
+
+/* EXPLORER */
+
+.explorer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: $gris_clair;
+    padding-bottom: 57px;
+    &__titre {
+        font-size: 24px; 
+        font-weight: 700; 
+        padding-top: 39px;
+        margin: 0px 58px 0px 42px;
+        @media screen and (min-width: 1024px) {
+            font-size: 40px; 
+            font-weight: 700; 
+        }
+    }
+    &__paragraphe {
+        font-size: 18px; 
+        font-weight: 300; 
+        color: #353535;
+        margin-bottom: 27px;
+    }
+    &__boutton {
+        text-decoration: none;
+        width: fit-content;
+        margin: auto;
+        background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+        border: none;
+        border-radius: 25px;
+        color: white;
+        font-size: 16px; 
+        font-weight: 500; 
+        padding: 13px 18.75px;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); 
+        &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+    }
+}
+
+/* EXPLORER */
+
+/* FONCTIONNEMENT */
+
+.fonctionnement {
+    margin: 20px;
+    @media screen and (min-width: 1024px) {
+        margin-left: 180px;
+        margin-right: 180px;
+        margin-top: 50px;
+    }
+    &__titre {
+        font-size: 24px; 
+        font-weight: 700; 
+        margin-bottom: 26px;
+    }
+    &__liste {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        list-style: none;
+        padding-left: 12px;
+        @media screen and (min-width: 1024px) {
+            flex-direction: inherit;
+            justify-content: space-around;
+        }
+        & li {
+            padding: 1.5rem;
+            background-color: $gris_clair;
+            border-radius: 20px; 
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15); 
+            position: relative;
+            @media screen and (min-width: 1024px) {
+                width: 30%;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                font-size: 18px; 
+                font-weight: 500;
+            }
+        }
+        &_numero {
+            color: white;
+            background-color: $violet;
+            width: 24px;
+            height: 24px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: absolute;
+            left: -11px;
+            bottom: 21px;
+            @media screen and (min-width: 1024px) {
+                width: 30px;
+                height: 30px;
+                bottom: 24px;
+            }
+        }
+    }
+    &__icone {
+        color: $gris_icones;
+        padding-left: 10px;
+        &_une {
+            padding-right: 27px;
+        }
+        &_deux {
+            padding-right: 23px;
+        }
+        &_trois {
+            padding-right: 20px;
+            color: $violet;
+        }
+    }
+}
+
+/* FONCTIONNEMENT */
+
+/* RESTAURANTS */
+
+.restaurants {
+    margin-top: 70px;
+    background-color: $gris_clair;
+    padding: 30px 15px 50px 15px;
+    gap: 18px;
+    @media screen and (min-width: 767.9px) and (max-width: 1024px) {
+        padding-bottom: 30px;
+    }
+    @media screen and (min-width: 1024px) {
+        padding-left: 180px;
+        padding-right: 180px;
+    }
+    &__titre {
+        margin-bottom: 0px;
+    }
+    &__card {
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10); 
+        border-radius: 15px; 
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+        margin: 10px 0px 20px 0px;
+    }
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+        @media screen and (min-width: 767.9px) and (max-width: 1024px) {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            justify-content: space-between;
+        }
+        &_ensemble {
+            width: 100%;
+            @media screen and (min-width: 767.9px) and (max-width: 1024px) {
+                width: 49%;
+            }
+            @media screen and (min-width: 1024px) {
+                width: 45%;
+                margin-top: 20px;
+            }
+        }
+    }
+    &__container {
+          padding: 0px 13px;
+          position: relative;
+          &__titre {
+              margin-top: 7px;
+              margin-bottom: 5px;
+              font-size: 18px; 
+              font-weight: 700; 
+          }
+          &__paragraphe {
+              margin: 0px;
+              font-size: 17px;
+              font-weight: 300;
+          }
+    }
+    &__image {
+          height: 231px;
+          border-radius: 15px 15px 0 0;
+          width: 100%;
+          object-fit: cover;
+    }
+    &__lien {
+          text-decoration: none;
+          color: black;
+    }
+    &__icone {
+          font-size: 25px;
+          position: absolute;
+          right: 20px;
+          bottom: 15px;
+    }
+    &__nouveau {
+        position: absolute;
+        right: 15px;
+        bottom: 250px;
+        padding: 5px 13px;
+        background-color: #99E2D0;
+        color: #008766;
+        border-radius: 2px; 
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+        font-size: 14px; 
+        font-weight: 500; 
+    }
+}
+
+/* RESTAURANTS */
+
+/**** MAIN FIN ****/
+
+/**** FOOTER ****/
+
+.footer {
+    padding: 25px;
+    background-color: $background_footer;
+    @media screen and (min-width: 767.9px) and (max-width: 1024px) {
+        padding-top: 45px;;
+    }
+    @media screen and (min-width: 1024px) {
+        padding-top: 45px;
+    }
+    &__titre {
+        font-family: 'Shrikhand';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400; 
+        margin: 0px;
+        color: white;
+        @media screen and (min-width: 1024px) {
+            margin-left: 100px;
+            margin-right: 30px;
+        }
+    }
+    &__liste {
+        list-style: none;
+        padding: 0px;
+        margin-bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        @media screen and (min-width: 767.9px) and (max-width: 1024px){
+            display: block;
+           & li {
+            display: inline-block;
+           }
+        }
+        @media screen and (min-width: 1024px) {
+            display: block;
+           & li {
+            display: inline-block;
+           }
+        }
+
+    }
+    &__lien {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 500; 
+        @media screen and (min-width: 767.9px) and (max-width: 1024px) {
+            margin-right: 20px;
+            &__deux {
+                margin-left: 20px;
+            }
+        }
+        @media screen and (min-width: 1024px) {
+            margin-right: 20px;
+            &__deux {
+            margin-left: 20px;
+            }
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+        &__deux {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 300; 
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__icone {
+        color: white;
+        font-size: small;
+        &__une {
+            padding-right: 11px;
+        }
+        &__deux {
+            padding-right: 5px;
+            @media screen and (min-width: 767.9px) and (max-width: 1440px)  {
+                padding-right: 11px;
+            }
+        }
+    }
+    &__container {
+        @media screen and (min-width: 767.9px) and (max-width: 1024px){
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            align-items: end;
+        }
+        @media screen and (min-width: 1024px) {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: end;
+        }
+    }
+}
+
+/**** FOOTER ****/
