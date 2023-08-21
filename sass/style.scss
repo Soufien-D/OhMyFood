@@ -1,16 +1,13 @@
 @use "./pages.scss";
 
 /**** VARIABLES ****/
-
 $gris_clair: #F6F6F6;
 $violet: #9356DC;
 $gris_icones: #7E7E7E;
 $background_footer: #353535;
-
 /**** VARIABLES ****/
 
 /**** GENERAL ****/
-
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
@@ -19,13 +16,11 @@ $background_footer: #353535;
 body {
     margin: 0px;
 }
-
 /**** GENERAL ****/
 
 /**** MAIN DEBUT ****/
 
 /* HEADER */
-
 .header {
     display: flex;
     justify-content: center;
@@ -38,11 +33,9 @@ body {
         }
     }
 }
-
 /* HEADER */
 
 /* LOCALISATION */
-
 .localisation {
     background-color: #EAEAEA;
     display: flex;
@@ -62,11 +55,9 @@ body {
         height: 16px; 
     }
 }
-
 /* LOCALISATION */
 
 /* EXPLORER */
-
 .explorer {
     display: flex;
     flex-direction: column;
@@ -89,29 +80,28 @@ body {
         color: #353535;
         margin-bottom: 27px;
     }
-    &__boutton {
-        text-decoration: none;
-        width: fit-content;
-        margin: auto;
-        background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-        border: none;
-        border-radius: 25px;
-        color: white;
-        font-size: 16px; 
-        font-weight: 500; 
-        padding: 13px 18.75px;
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); 
-        &:hover {
-            opacity: 0.8;
-            cursor: pointer;
-        }
-    }
 }
 
+.boutton__accueil {
+    text-decoration: none;
+    width: fit-content;
+    margin: auto;
+    background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px; 
+    font-weight: 500; 
+    padding: 13px 18.75px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); 
+    &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+}
 /* EXPLORER */
 
 /* FONCTIONNEMENT */
-
 .fonctionnement {
     margin: 20px;
     @media screen and (min-width: 1024px) {
@@ -183,11 +173,9 @@ body {
         }
     }
 }
-
 /* FONCTIONNEMENT */
 
 /* RESTAURANTS */
-
 .restaurants {
     margin-top: 70px;
     background-color: $gris_clair;
@@ -280,13 +268,11 @@ body {
         font-weight: 500; 
     }
 }
-
 /* RESTAURANTS */
 
 /**** MAIN FIN ****/
 
 /**** FOOTER ****/
-
 .footer {
     padding: 25px;
     background-color: $background_footer;
@@ -386,5 +372,6 @@ body {
         }
     }
 }
+
 
 /**** FOOTER ****/
