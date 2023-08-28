@@ -131,33 +131,63 @@ $vert_clair: #99E2D0;
         flex-direction: column;
         gap: 12px;
         & li {
-            padding: 0.8rem;
             background-color: white;
             border-radius: 15px;
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
             cursor: pointer;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            &:hover .menu__liste_coche {
+                margin-right: 0px;
+            }
+        }
+        &_plats {
+            padding: 0.8rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         &_nom_un {
             margin: 0px;
             margin-bottom: 5px;
             font-size: 18px; 
             font-weight: 500; 
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         &_nom_deux {
             margin: 0px;
             font-size: 15px; 
             font-weight: 300; 
-            display: flex;
-            justify-content: space-between;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         &_prix {
             font-size: 15px; 
             font-weight: 700; 
             color: $background_footer;
+            margin-left: auto;
+            margin-right: 20px;
+            padding-bottom: 0.8rem;
+        }
+        &_coche {
+            width: 59px;
+            height: 71px; 
+            margin-right: -60px;
+            background-color: $vert_clair;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 22px;
+            border-radius: 0px 15px 15px 0px;
+            transition-duration: 900ms;
         }
     }    
 }
-
 
 .boutton__restaurants {
     display: flex;
