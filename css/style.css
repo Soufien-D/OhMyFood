@@ -1,5 +1,17 @@
 /**** VARIABLES ****/
 /**** VARIABLES ****/
+/**** KEYFRAMES ****/
+@keyframes apparitionPlats {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/**** KEYFRAMES ****/
 /***** RESTAURANTS ****/
 /** HEADER **/
 .header__icone {
@@ -68,6 +80,9 @@
   font-weight: 400;
   margin: 0px;
   margin-left: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 @media screen and (min-width: 767.9px) and (max-width: 1024px) {
   .menu__titre {
@@ -195,6 +210,51 @@
   border-radius: 0px 15px 15px 0px;
   transition-duration: 900ms;
 }
+.menu__liste_animation {
+  animation: apparitionPlats 500ms ease-in-out;
+  animation-fill-mode: forwards;
+  transform: scale(0);
+}
+
+.delai_un {
+  animation-delay: 0s;
+}
+
+.delai_deux {
+  animation-delay: 0.15s;
+}
+
+.delai_trois {
+  animation-delay: 0.3s;
+}
+
+.delai_quatre {
+  animation-delay: 0.45s;
+}
+
+.delai_cinq {
+  animation-delay: 0.6s;
+}
+
+.delai_six {
+  animation-delay: 0.75s;
+}
+
+.delai_sept {
+  animation-delay: 0.9s;
+}
+
+.delai_huit {
+  animation-delay: 1.05s;
+}
+
+.delai_neuf {
+  animation-delay: 1.2s;
+}
+
+.delai_dix {
+  animation-delay: 1.35s;
+}
 
 .boutton__restaurants {
   display: flex;
@@ -223,10 +283,10 @@
 /**** VARIABLES ****/
 /**** KEYFRAMES ****/
 @keyframes loadscreen {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  100% {
     opacity: 0;
     visibility: hidden;
   }
@@ -261,7 +321,7 @@ body {
   height: 100%;
   width: 100%;
   z-index: 100;
-  animation: loadscreen 1s 4s forwards;
+  animation: loadscreen 1s 2.5s forwards;
 }
 
 .load {

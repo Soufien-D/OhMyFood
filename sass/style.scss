@@ -10,10 +10,10 @@ $background_footer: #353535;
 /**** KEYFRAMES ****/
 
 @keyframes loadscreen {
-    from {
+    0% {
       opacity: 1;
     }
-    to {
+    100% {
       opacity: 0;
       visibility: hidden;
     }
@@ -51,7 +51,7 @@ body {
     height: 100%;
     width: 100%;
     z-index: 100;
-    animation: loadscreen 1s 4s forwards;
+    animation: loadscreen 1s 2.5s forwards;
   }
   
   .load {

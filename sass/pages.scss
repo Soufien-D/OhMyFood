@@ -6,7 +6,19 @@ $background_footer: #353535;
 $vert_clair: #99E2D0;
 /**** VARIABLES ****/
 
+/**** KEYFRAMES ****/
+@keyframes apparitionPlats {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
 
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+/**** KEYFRAMES ****/
 
 /***** RESTAURANTS ****/ 
 
@@ -68,6 +80,9 @@ $vert_clair: #99E2D0;
         font-weight: 400; 
         margin: 0px;
         margin-left: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         @media screen and (min-width: 767.9px) and (max-width: 1024px) {
             display: flex;
             justify-content: center;
@@ -186,7 +201,52 @@ $vert_clair: #99E2D0;
             border-radius: 0px 15px 15px 0px;
             transition-duration: 900ms;
         }
+        &_animation {
+            animation: apparitionPlats 500ms ease-in-out;
+            animation-fill-mode: forwards;
+            transform: scale(0);
+        }
     }    
+}
+
+.delai_un {
+    animation-delay: 0s;
+  }
+  
+.delai_deux {
+    animation-delay: 0.15s;
+  }
+  
+.delai_trois {
+    animation-delay: 0.3s;
+  }
+  
+.delai_quatre {
+    animation-delay: 0.45s;
+  }
+  
+.delai_cinq {
+    animation-delay: 0.6s;
+  }
+  
+.delai_six {
+    animation-delay: 0.75s;
+  }
+  
+.delai_sept {
+    animation-delay: 0.9s;
+  }
+  
+.delai_huit {
+    animation-delay: 1.05s;
+  }
+  
+.delai_neuf {
+    animation-delay: 1.2s;
+  }
+
+.delai_dix {
+    animation-delay: 1.35s;
 }
 
 .boutton__restaurants {
