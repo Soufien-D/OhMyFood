@@ -8,12 +8,12 @@ $vert_clair: #99E2D0;
 
 /**** KEYFRAMES ****/
 @keyframes apparitionPlats {
-    0% {
+    from {
         transform: translateY(20px);
         opacity: 0;
     }
 
-    100% {
+    to {
         transform: translateY(0px);
         opacity: 1;
     }

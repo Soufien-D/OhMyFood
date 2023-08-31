@@ -2,11 +2,11 @@
 /**** VARIABLES ****/
 /**** KEYFRAMES ****/
 @keyframes apparitionPlats {
-  0% {
+  from {
     transform: translateY(20px);
     opacity: 0;
   }
-  100% {
+  to {
     transform: translateY(0px);
     opacity: 1;
   }
@@ -283,20 +283,20 @@
 /**** VARIABLES ****/
 /**** KEYFRAMES ****/
 @keyframes loadscreen {
-  0% {
+  from {
     opacity: 1;
   }
-  100% {
+  to {
     opacity: 0;
     visibility: hidden;
   }
 }
 @keyframes load_balls {
-  0% {
+  from {
     transform: scaleY(0.5);
     opacity: 0.7;
   }
-  100% {
+  to {
     transform: scaleY(1);
     opacity: 1;
   }
