@@ -71,7 +71,7 @@
     width: auto;
     margin-left: 190px;
     margin-right: 190px;
-    padding: 50px 200px 40px 200px;
+    padding: 50px 180px 40px 180px;
   }
 }
 .menu__titre {
@@ -97,6 +97,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
+    flex-wrap: wrap;
   }
 }
 .menu__titre_deux {
